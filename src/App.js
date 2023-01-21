@@ -9,7 +9,7 @@ import {
   Error,
   About,
   Products,
-  PrivateRoute,
+  // PrivateRoute,
 } from './pages'
 
 function App() {
@@ -27,9 +27,9 @@ function App() {
         <Route
           path='checkout'
           element={
-            <PrivateRoute>
-              <Checkout />
-            </PrivateRoute>
+            // <PrivateRoute>
+            <Checkout />
+            // </PrivateRoute>
           }
         />
       </Routes>
