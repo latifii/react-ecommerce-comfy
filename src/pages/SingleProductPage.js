@@ -55,9 +55,10 @@ const SingleProductPage = () => {
     company,
     description,
     images,
+    reviews,
   } = product
   return (
-    <Wrapper>
+    <Wrapper className='page-100'>
       <PageHero title={name} product />
       <div className='section section-center page'>
         <Link to='/products' className='btn'>
@@ -67,7 +68,7 @@ const SingleProductPage = () => {
           <ProductImages images={images} />
           <section className='content'>
             <h2>{name}</h2>
-            <Stars />
+            <Stars reviews={reviews} stars={stars} />
             <h5 className='price'>{formatPrice(price)}</h5>
             <p className='desc'>{description}</p>
             <p className='info'>
@@ -83,7 +84,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            <AddToCart />
+            <AddToCart product={product} />
           </section>
         </div>
       </div>
